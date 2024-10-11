@@ -1,0 +1,218 @@
+:root{
+            --main-radius: 5px;
+            --main-padding: 5px; 
+        }
+        body{
+            text-align: left;
+            
+        }
+        .container{
+            display:grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-rows: 0.5fr 3fr 3fr 3fr 4fr 0.2fr;
+            height : 100vh;
+            grid-template-areas: 
+            "nav nav nav nav"
+            "profile profile achievements achievements"
+            "paper1 paper2 paper3 paper4"
+            "paper5 paper6 paper7 paper8"
+            "gallery gallery gallery gallery"
+            "footer footer footer footer"
+            ;
+            color: black;
+            grid-gap: 0.5rem;
+        }
+        .nav{
+            background-color:#03045E;
+            grid-area: nav;
+            border-radius: var(--main-radius);
+            padding: var(--main-padding);
+        
+        }
+        .nav a{
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            padding:14px 70px;
+            font-size: 15px;
+
+        }
+        .nav a:hover{
+            background-color: #CAF0F8;
+            color: black;
+        }
+        .nav a.active{
+            background-color: #ccf2f8;
+            color: black;
+        }
+        .nav .icon{
+            display:none;
+        }
+        #profile{
+            background-color:#0096C7;
+            grid-area: profile;
+            border-radius: var(--main-radius);
+            padding: var(--main-padding);
+            text-align: center;
+            color: white;
+
+        }
+        #profile img{
+            width: 20vh;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        #achievements{
+            background-color: #48b2d5;
+            grid-area: achievements ;
+            border-radius: var(--main-radius);
+            padding: var(--main-padding);     
+        }
+        #paper1{
+            background-color:#1db0e2;
+            grid-area: paper1;
+            border-radius: var(--main-radius);
+            padding: var(--main-padding);
+        }
+        #paper1 img{
+            width:10%
+        }
+        #paper2{
+            background-color:#48CAE4;
+            grid-area: paper2;
+            border-radius: var(--main-radius);
+            padding: var(--main-padding);
+        }
+        #paper2 img{
+            width:10%
+        }
+        #paper3{
+            background-color:#acf3ff;
+            grid-area: paper3;
+            border-radius: var(--main-radius);
+            padding: var(--main-padding);
+        }
+        #paper3 img{
+            width:10%
+        }
+        #paper4{
+            background-color:#90E0EF;
+            grid-area: paper4;
+            border-radius: var(--main-radius);
+            padding: var(--main-padding);
+        }
+        #paper4 img{
+            width:10%
+        }
+        #paper5{
+            background-color:#18baf1;
+            grid-area: paper5;
+            border-radius: var(--main-radius);
+            padding: var(--main-padding);
+        }
+        #paper5 img{
+            width:10%
+        }
+        #paper6{
+            background-color:#60dff9;
+            grid-area: paper6;
+            border-radius: var(--main-radius);
+            padding: var(--main-padding);
+        }
+        #paper6 img{
+            width:10%
+        }
+        #paper7{
+            background-color:#ccf2f8;
+            grid-area: paper7;
+            border-radius: var(--main-radius);
+            padding: var(--main-padding);
+        }
+        #paper7 img{
+            width:10%
+        }
+        #paper8{
+            background-color:#c1f6ff;
+            grid-area: paper8;
+            border-radius: var(--main-radius);
+            padding: var(--main-padding);
+        }
+        #paper8 img{
+            width:10%
+        }
+        #gallery
+        {
+            background-color: #ebfafd;
+            grid-area: gallery;
+            border-radius: var(--main-radius);
+            padding: var(--main-padding);            
+        }
+        #footer{
+            background-color: #03045E;
+            grid-area: footer;
+            border-radius: var(--main-radius);
+            padding: var(--main-padding);            
+            text-align: center;
+            color: white;
+        }
+        #footer a{
+            text-decoration: none;
+            color: #c9f5fc;
+        }
+        #footer a:hover{
+            background-color: #CAF0F8;
+            color: black;
+        }
+        @media only screen and (max-width:500px){
+        
+            .container{
+                grid-template-columns: 1fr;
+                grid-template-rows: 0.4fr 1.5fr 1.5fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 0.2fr;
+                grid-template-areas: 
+                "nav"
+                "profile"
+                "achievements"
+                "paper1"
+                "paper2"
+                "paper3"
+                "paper4"
+                "paper5"
+                "paper6"
+                "paper7"
+                "paper8"
+                "gallery"
+                "footer"
+                ;
+                grid-gap: 0.5rem;
+            }
+        }
+                @media screen and (max-width:500px) {
+                    .nav a:not(:first-child){
+                        display: none;
+                    }
+                    .nav a.icon{
+                        float: right;
+                        display: block;
+
+                    }  
+                }
+                @media screen and (max-width:500px)
+                {
+                    .nav.responsive {position: relative;}
+                    .nav.responsive .icon {
+                      position: absolute;
+                      right: 0;
+                      top: 0;
+                    }
+                    .nav.responsive a {
+                      float: none;
+                      display: block;
+                      text-align: left;
+                    }
+                }
+            
+        
+        
+        
